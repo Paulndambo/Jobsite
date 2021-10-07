@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<br>
+<br>
+<br>
+<div class="row">
+<div class="col-4">
+   <h3>Personal Details</h3>
+   <hr>
+   <h4>Name: {{member.name}}</h4>
+   <p>Availability: {{member.availability}}</p>
+   <p>Phone Number: {{member.phone_number}}</p>
+</div>
+<div class="col-4">
+   <h3>Education Details</h3>
+   <hr>
+</div>
+<div class="col-4">
+   <h3>Other Details</h3>
+   <hr>
+</div>
+</div>
+
+
+{% endblock %}

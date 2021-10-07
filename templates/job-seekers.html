@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<br>
+<br>
+<br>
+<div class="row">
+{% for member in object_list %}
+<div class="col-lg-6 col-md-6 col-sm-6">
+		<h3>Name: {{member.name}}</h3>
+		<p>Gender: {{member.gender}}</p>
+		<p>Availability: {{member.availability}}</p>
+		<p><a href="{% url 'job-seeker-details' member.pk %}" class="btn btn-info">Details</a></p>
+		<hr/>
+</div>
+		{% endfor %}
+	</div>
+</div>
+
+{% endblock content %}

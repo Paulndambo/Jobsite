@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<br>
+<br>
+<br>
+
+<div class="row">
+{% for employer in object_list %}
+<div class="col-lg-6 col-md-6 col-sm-6">
+    <h3><a href="{% url 'employer-details' employer.pk %}">{{employer.name}}</a></h3>
+    
+    <hr>
+    <p>{{employer.phone_number}}</p>
+    <p>{{employer.country}}</p>
+</div>
+{% endfor %}
+</div>
+
+{% endblock content %}
